@@ -18,19 +18,53 @@ final class TDD_with_Swift_First_UTTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
-    }
+    func test_numberOfVowels_whenGivenDominik_shouldReturn3() {
 
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+      let viewController = ViewController()
+
+      let result = viewController.numberOfVowels(in: "Dominik")
+
+      XCTAssertEqual(result, 3,
+
+        "Expected 3 vowels in 'Dominik' but got \(result)")
+
+    }
+    
+    //
+    // TDD example #1:- Custom assert function
+    //
+    // Adding custom assert method helps to show accurate failure reason by adding custom logic like the one in DDHAssertEqual method below.
+    func test_dictsAreQual() {
+
+      let dict1 = ["id": "2", "name": "foo"]
+
+      let dict2 = ["id": "2", "name": "fo"]
+
+      DDHAssertEqual(dict1, dict2)
+
+    }
+    
+    /// Adding file: StaticString = #filePath and line: UInt = #line make the error appear in the test function where this assert method is called/ Otherwise the error would appear in this method only.
+    func DDHAssertEqual<A: Equatable, B: Equatable>
+      (_ first: [A:B],
+       _ second: [A:B],
+       file: StaticString = #filePath,
+       line: UInt = #line) {
+
+      if first == second {
+        return
+      }
+
+      for key in first.keys {
+        if first[key] != second[key] {
+          let value1 = String(describing: first[key]!)
+          let value2 = String(describing: second[key]!)
+          let keyValue1 = "\"\(key)\": \(value1)"
+          let keyValue2 = "\"\(key)\": \(value2)"
+          let message = "\(keyValue1) is not equal to \(keyValue2)"
+          XCTFail(message, file: file, line: line)
+          return
         }
+      }
     }
-
 }
