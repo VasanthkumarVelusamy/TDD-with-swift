@@ -46,6 +46,20 @@ final class TDD_with_Swift_First_UTTests: XCTestCase {
         XCTAssertEqual(result, expected)
     }
     
+    func test_reverseString_shouldReversePassedInString() {
+        let input = "name"
+        let result = blogger.reverseString(from: input)
+        let expected = "eman"
+        XCTAssertEqual(result, expected)
+    }
+    
+    func test_reverseString_shouldReversePassedInString_2() {
+        let input = "vasanth"
+        let result = blogger.reverseString(from: input)
+        let expected = "htnasav"
+        XCTAssertEqual(result, expected)
+    }
+    
     //
     // TDD example #1:- Custom assert function
     //

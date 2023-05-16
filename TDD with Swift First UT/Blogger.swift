@@ -11,4 +11,8 @@ struct Blogger {
     func makeHeadline(from input: String) -> String {
         return input.capitalized
     }
+    
+    func reverseString(from input: String) -> String {
+        return String(input.reversed())
+    }
 }
