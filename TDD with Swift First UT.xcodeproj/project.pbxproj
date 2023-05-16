@@ -16,6 +16,7 @@
 		7616E3312A0F5B730048A38F /* TDD_with_Swift_First_UTTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7616E3302A0F5B730048A38F /* TDD_with_Swift_First_UTTests.swift */; };
 		7616E33B2A0F5B730048A38F /* TDD_with_Swift_First_UTUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7616E33A2A0F5B730048A38F /* TDD_with_Swift_First_UTUITests.swift */; };
 		7616E33D2A0F5B730048A38F /* TDD_with_Swift_First_UTUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7616E33C2A0F5B730048A38F /* TDD_with_Swift_First_UTUITestsLaunchTests.swift */; };
+		76331AAE2A1363DA00097027 /* Blogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76331AAD2A1363DA00097027 /* Blogger.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		7616E3362A0F5B730048A38F /* TDD with Swift First UTUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TDD with Swift First UTUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7616E33A2A0F5B730048A38F /* TDD_with_Swift_First_UTUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TDD_with_Swift_First_UTUITests.swift; sourceTree = "<group>"; };
 		7616E33C2A0F5B730048A38F /* TDD_with_Swift_First_UTUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TDD_with_Swift_First_UTUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		76331AAD2A1363DA00097027 /* Blogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blogger.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				7616E3192A0F5B700048A38F /* AppDelegate.swift */,
 				7616E31B2A0F5B700048A38F /* SceneDelegate.swift */,
 				7616E31D2A0F5B700048A38F /* ViewController.swift */,
+				76331AAD2A1363DA00097027 /* Blogger.swift */,
 				7616E31F2A0F5B700048A38F /* Main.storyboard */,
 				7616E3222A0F5B720048A38F /* Assets.xcassets */,
 				7616E3242A0F5B720048A38F /* LaunchScreen.storyboard */,
@@ -260,6 +263,7 @@
 			files = (
 				7616E31E2A0F5B700048A38F /* ViewController.swift in Sources */,
 				7616E31A2A0F5B700048A38F /* AppDelegate.swift in Sources */,
+				76331AAE2A1363DA00097027 /* Blogger.swift in Sources */,
 				7616E31C2A0F5B700048A38F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

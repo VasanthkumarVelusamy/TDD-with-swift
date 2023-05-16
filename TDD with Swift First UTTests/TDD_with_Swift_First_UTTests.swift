@@ -10,12 +10,14 @@ import XCTest
 
 final class TDD_with_Swift_First_UTTests: XCTestCase {
 
+    var blogger: Blogger!
+    
     override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        blogger = Blogger()
     }
 
     override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        blogger = nil
     }
 
     func test_numberOfVowels_whenGivenDominik_shouldReturn3() {
@@ -30,11 +32,25 @@ final class TDD_with_Swift_First_UTTests: XCTestCase {
 
     }
     
+    func test_makeHeadline_shouldCapitalisePassedInString() {
+        let input = "the Accessibility inspector"
+        let result = blogger.makeHeadline(from: input)
+        let expected = "The Accessibility Inspector"
+        XCTAssertEqual(result, expected)
+    }
+    
+    func test_makeHeadline_shouldCapitalisePassedInString_2() {
+        let input = "the contextual action menu"
+        let result = blogger.makeHeadline(from: input)
+        let expected = "The Contextual Action Menu"
+        XCTAssertEqual(result, expected)
+    }
+    
     //
     // TDD example #1:- Custom assert function
     //
     // Adding custom assert method helps to show accurate failure reason by adding custom logic like the one in DDHAssertEqual method below.
-    func test_dictsAreQual() {
+    func dictsAreQual() {
 
       let dict1 = ["id": "2", "name": "foo"]
 
