@@ -15,4 +15,8 @@ struct Blogger {
     func reverseString(from input: String) -> String {
         return String(input.reversed())
     }
+    
+    func makeFileName(from headline: String) -> String {
+        return headline.replacingOccurrences(of: " ", with: "_")
+    }
 }

@@ -60,6 +60,22 @@ final class TDD_with_Swift_First_UTTests: XCTestCase {
         XCTAssertEqual(result, expected)
     }
     
+    func test_makeFileName_shouldMakeFileNameFromPassedInString_replacingSpaceWithUserScore() {
+        let input = "the Amazing spiderman"
+        let headline = blogger.makeHeadline(from: input)
+        let result = blogger.makeFileName(from: headline)
+        let expected = "The_Amazing_Spiderman"
+        XCTAssertEqual(result, expected)
+    }
+    
+    func test_makeFileName_shouldMakeFileNameFromPassedInString_replacingSpaceWithUserScore_2() {
+        let input = "the batman begins"
+        let headline = blogger.makeHeadline(from: input)
+        let result = blogger.makeFileName(from: headline)
+        let expected = "The_Batman_Begins"
+        XCTAssertEqual(result, expected)
+    }
+    
     //
     // TDD example #1:- Custom assert function
     //
